@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Forget Password</title>
+
+<style>
+/* التعديل على الـ body لضمان السنترة الكاملة */
+body {
+    background-color: #E4F1FA;
+    font-family: 'Poppins', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+}
+
+
+.main-container {
+    display: flex;
+    flex-direction: column; 
+    align-items: center;    
+    width: 100%;
+    max-width: 400px;
+    padding: 20px;
+}
+
+
+.logo {
+    margin-bottom: 30px; 
+}
+
+.logo img {
+    width: 200px;
+    height: auto;
+    display: block;
+}
+
+.form-card {
+    width: 100%;
+    text-align: center;
+}
+
+
+input[type="password"] {
+    width: 100%;
+    padding: 15px 25px;
+    margin-bottom: 20px;
+    border: none;
+    border-radius: 50px;
+    background-color: #ffffff;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+    box-sizing: border-box;
+    outline: none;
+}
+
+button[type="submit"] {
+    width: 160px;
+    padding: 12px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 50px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+</style>
+</head>
+
+
+<body>
+    <div class="main-container">
+        <div class="logo">
+            <img src="images/logo.svg" alt="RapidQ Logo">
+        </div>
+
+        <div class="form-card">
+            <form>
+                <div class="input-group">
+                    <input type="password" required placeholder="Current Password" minlength="8">
+                </div>
+                <div class="input-group">
+                    <input type="password" required placeholder="New Password" minlength="8">
+                </div>
+                <div class="input-group">
+                    <input type="password" required placeholder="Confirm New Password" minlength="8">
+                </div>
+                <button type="submit" class="btn-submit">Save</button>
+            </form>
+        </div>
+    </div>
+</body>
+</html>
