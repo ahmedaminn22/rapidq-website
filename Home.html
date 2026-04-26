@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RapidQ</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+ body {
+    background-color: #E4F1FA;
+    margin: 0;
+ }
+ nav {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 400; /* خليه ريجولار كحالة افتراضية */
+    display: flex;
+    justify-content: space-between; /* ده اللي بيرمي اللوجو شمال، المنيو في النص، والزرار يمين */
+    align-items: center; /* بيخلي كل الحاجات على خط واحد بالعرض */
+    padding: 50px 50px; /* بيعمل المساحة اللي في الكورنر اللي أنت عايزها */
+    max-width: 1400px; /* ده أقصى عرض يوصل له الهيدر */
+    margin: 0 auto;    /* ده اللي بيخلي الهيدر يسنتر نفسه في نص الشاشة لما تكبر */
+}
+
+.nav-links a {
+    padding: 0 25px; /* بيعمل مسافة بين كل كلمة والتانية */
+    text-decoration: none; /* بيشيل الخط اللي تحت اللينكات */
+    color: #000000; /* لون الخط اللي في البراند بتاعك */
+    font-weight: 600;
+}
+.nav-links a:hover {
+    color: #0573E4;
+}
+.btn-appointment {
+    background-color: #0573E4;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: 900;
+}
+
+.logo img {
+    height: 45px;
+    width: auto;  
+}
+                .hero {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                max-width: 1400px;
+                margin: 0 auto;
+                padding: 60px 50px 60px 0px;
+            }
+
+            .hero-content {
+                max-width: 55%;
+                margin-left: -30px;
+            }
+
+            .hero-content h1 {
+                font-family: 'Poppins', sans-serif;
+                font-size: 110px;
+                font-weight: 900;
+                line-height: 1.1;
+                margin: 0;
+                color: #000000;
+            }
+
+            .hero-content h1 span {
+                color: #0573E4;
+            }
+
+            .hero-content p {
+                font-family: 'Poppins', sans-serif;
+                font-size: 14px;
+                color: #888888;
+                margin: 20px 0 30px 0;
+                
+            }
+
+            .btn-primary {
+                background-color: #0573E4;
+                color: white;
+                border: none;
+                padding: 15px 35px;
+                border-radius: 10px;
+                cursor: pointer;
+                font-family: 'Poppins', sans-serif;
+                font-weight: 700;
+                font-size: 16px;
+            }
+
+           .hero-image {
+    position: relative;
+    width: 420px;
+    height: 500px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: visible;
+}
+
+.hero-image::before {
+    content: '';
+    position: absolute;
+    width: 590px;
+    height: 630px;
+    background-color: #ffffff;
+    border-radius: 120px;
+    transform: rotate(10deg);
+    z-index: 0;
+    top: 30px;
+}
+
+.hero-image img {
+    position: relative;
+    height: 1150px;
+    width: auto;
+    object-fit: cover;
+    z-index: 1;
+    margin-top: 250px;
+    pointer-events: none;
+}
+          @media (max-width: 768px) {
+    nav {
+        padding: 20px;
+        flex-wrap: wrap;
+        gap: 15px;
+    }
+
+    .nav-links {
+        display: none; /* أو تعمله hamburger menu */
+    }
+
+    .hero {
+        flex-direction: column;
+        padding: 30px 20px;
+        text-align: center;
+    }
+
+    .hero-content {
+        max-width: 100%;
+        margin-left: 0;
+    }
+
+    .hero-content h1 {
+        font-size: 48px;
+    }
+
+    .hero-image {
+        width: 100%;
+        height: 350px;
+        margin-top: 30px;
+    }
+
+    .hero-image::before {
+        width: 320px;
+        height: 380px;
+    }
+
+    .hero-image img {
+        height: 600px;
+        margin-top: 150px;
+    }
+}
+          </style>
+                        </head>
+                        <body>
+                        <nav>
+                            <div class="logo">
+                                <img src="images/logo.svg" alt="RapidQ Logo">
+                            </div>
+
+                            <div class="nav-links">
+                                <a href="Home.html">Home</a>
+                                <a href="Doctor.html">Doctors</a>
+                                <a href="Tracking.html">Tracking</a>
+                                <a href="Contact.html">Contact</a>
+                            </div>
+                            <a href="Booking.html">
+                                <button type="button" class="btn-appointment">Book Appointment</button>
+                                 </a>
+                        </nav>
+
+                        <section class="hero">
+                            <div class="hero-content">
+                            <h1>Stop <span>Waiting.</span><br>Start Healing</h1>
+                                <p>• Find the best doctors, check real-time availability, 
+                        and book your visit without the hassle of long phone calls 
+                        or crowded waiting rooms.</p>
+                        <a href="Booking.html">
+                             <button class="btn-primary">Book Appointment</button>
+                         </a>
+                    </div>
+
+                            <div class="hero-image">
+                                <img src="images/portrait-professional-medical-worker-posing-picture-with-arms-folded.png" alt="Doctor Image">
+                            </div>
+                        </section>
+
+                        </body>
