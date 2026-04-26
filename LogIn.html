@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Login</title>
+<div class="logo">
+    <h2>RapidQ</h2>
+</div>
+
+
+<style>
+
+    .logo{
+        width:50% ;
+        margin-left:auto ;
+        margin-right: auto;
+        margin-top: 200px;
+
+    }
+    body{
+         width:10% ;
+        margin-left:auto ;
+        margin-right: auto;
+        margin-top: 200px;
+    }
+
+    
+</style>
+
+
+
+</head>
+
+
+<body>
+    <div class="user">
+<button onclick="showPatient()">Patient</button>
+<button onclick="showDoctor()">Doctor</button>
+</div>
+
+<form action="Home.html">
+    <div class="content">
+<label>Email</label><br>
+<input type="email" required placeholder=" Enter Your Email" ><br><br>
+
+<label>Password</label><br>
+<input type="password" required placeholder=" Enter Your Password" minlength="8" ><br><br>
+</div>
+<div class="options">
+<label>
+<input type="checkbox"> Remember Me
+</label>
+<a href="forgot.html" target="_blank">Forgot Password?</a>
+</div>
+
+<div class="button">
+    <button type="submit">Login</button>
+
+<a href="signup.html" >
+    <button type="button">Sign Up</button></form>
+</div>
+    <div id="extra"></div>
+
+    <script>
+function showPatient(){
+document.getElementById("extra").innerHTML="";
+}
+
+function showDoctor(){
+document.getElementById("extra").innerHTML=
+}
+</script>
+
+</body>
+</html> 
