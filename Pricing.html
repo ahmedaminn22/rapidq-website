@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<head>
+<title>RapidQ – Pricing</title>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    background: #dce8f5;
+   
+  }
+
+
+  nav {
+    background: #dce8f5;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 14px 56px;
+  }
+  .nav-actions { display: flex; gap: 14px; }
+  .btn {
+    padding: 12px 32px;
+    border-radius: 11px;
+    font-size: 20px;
+    font-weight: 600;
+    cursor: pointer;
+    border: none;
+    transition: opacity 0.15s;
+    white-space: nowrap;
+    text-decoration: none !important;
+    display: inline-block;
+  }
+  .btn:hover { opacity: 0.85; }
+  .btn-outline { background: #2563eb; color: #fff; border: 2px solid #2563eb; }
+  .btn-dark { background: #111; color: #fff; }
+ 
+  .page-header {
+    text-align: center;
+    padding: 40px 20px 30px;
+  }
+  .page-header h1 {
+    font-size: 52px;
+    font-weight: 900;
+    color: #111;
+    margin-bottom: 10px;
+  }
+  .page-header p {
+    font-size: 20px;
+    color: #2563eb;
+    font-weight: 400;
+  }
+
+ 
+  .pricing-grid {
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+    gap: 40px;
+    padding: 0 56px 50px;
+    flex-wrap: wrap;
+  }
+
+  
+  .plan-card {
+    background: #fff;
+    border-radius: 28px;
+    width: 320px;
+    overflow: hidden;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.07);
+    display: flex;
+    flex-direction: column;
+  }
+
+  .plan-header {
+    background: #2563eb;
+    padding: 32px 36px 28px;
+    color: #fff;
+  }
+  .plan-badge {
+    display: inline-block;
+    border: 1.5px solid rgba(255,255,255,0.7);
+    border-radius: 999px;
+    padding: 4px 18px;
+    font-size: 16px;
+    font-weight: 600;
+    margin-bottom: 16px;
+  }
+  .plan-price {
+    font-size: 52px;
+    font-weight: 900;
+    line-height: 1;
+  }
+  .plan-price sub {
+    font-size: 17px;
+    font-weight: 500;
+    vertical-align: baseline;
+  }
+
+  .plan-body {
+    padding: 32px 36px 36px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    flex: 1;
+  }
+
+  .feature-list {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 13px;
+    flex: 1;
+  }
+  .feature-list li {
+    display: flex;
+    align-items: center;
+    gap: 11px;
+    font-size: 18px;
+    color: #2563eb;
+    font-weight: 500;
+  }
+  .feature-list li svg {
+    flex-shrink: 0;
+    width: 22px;
+    height: 22px;
+  }
+
+  .btn-get-started {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    background: #2563eb;
+    color: #fff;
+    border: none;
+    border-radius: 13px;
+    padding: 17px 30px;
+    font-size: 19px;
+    font-weight: 700;
+    cursor: pointer;
+    width: 100%;
+    transition: background 0.15s;
+    margin-top: 10px;
+  }
+  .btn-get-started:hover { background: #1d4ed8; }
+  
+
+  .payment-banner {
+    background: #fff;
+    border-radius: 28px;
+    margin:  20 56px 50px;
+    padding: 24px 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 32px;
+    flex-wrap: wrap;
+  }
+
+  .payment-img {
+    height: 44px;
+    width: auto;
+    max-width: 130px;
+    object-fit: contain;
+  }
+
+  @media (max-width: 480px) {
+    nav { padding: 14px 16px; }
+    nav img { width: 130px !important; }
+    .btn { padding: 8px 14px; font-size: 14px; }
+    .page-header { padding: 20px 14px 16px; }
+    .page-header h1 { font-size: 28px; }
+    .page-header p { font-size: 15px; }
+    .pricing-grid {
+      flex-direction: column;
+      align-items: center;
+      padding: 0 14px 28px;
+      gap: 16px;
+    }
+    .plan-card { width: 100%; max-width: 380px; }
+    .plan-header { padding: 20px 20px 16px; }
+    .plan-price { font-size: 36px; }
+    .plan-body { padding: 20px 20px 24px; }
+    .feature-list li { font-size: 15px; }
+    .btn-get-started { font-size: 16px; padding: 13px 20px; }
+    .payment-banner { margin: 0 14px 28px; gap: 12px; padding: 16px 14px; }
+    .payment-img { height: 26px; max-width: 80px; }
+  }
+</style>
+</head>
+<body>
+
+
+<nav>
+  <div>
+    <img src="images/logo.svg" width="200">
+  </div>
+  <div class="nav-actions">
+    <a href="Home.html" class="btn btn-outline">Home</a>
+   
+  </div>
+</nav>
+
+
+<div class="page-header">
+  <h1>Simple, Transparent Pricing</h1>
+  <p>Choose the plan that fits your clinic or start booking instantly as a patient.</p>
+</div>
+
+
+<div class="pricing-grid">
+
+ 
+  <div class="plan-card">
+    <div class="plan-header">
+      <div class="plan-badge">Basic Plan</div>
+      <div class="plan-price">100 EGP<sub>/month</sub></div>
+    </div>
+    <div class="plan-body">
+      <ul class="feature-list">
+        <li>
+        ✔️ Queue tracking
+        </li>
+        <li>
+        ✔️ Patient check-in
+        </li>
+        <li>
+        ✔️ Email alerts
+        </li>
+      </ul>
+      <button class="btn-get-started">
+        Get Started
+        
+        </svg>
+      </button>
+    </div>
+  </div>
+
+  
+  <div class="plan-card">
+    <div class="plan-header">
+      <div class="plan-badge">Premium Plan</div>
+      <div class="plan-price">250 EGP<sub>/month</sub></div>
+    </div>
+    <div class="plan-body">
+      <ul class="feature-list">
+        <li>
+          ✔️ Everything in Basic
+        </li>
+        <li>
+         ✔️ WhatsApp alerts
+        </li>
+        <li>
+         ✔️ Analytics dashboard
+        </li>
+        <li>
+         ✔️ Multi-doctor support
+        </li>
+      </ul>
+      <button class="btn-get-started">
+        Get Started
+      </button>
+    </div>
+  </div>
+
+</div>
+
+
+<div class="payment-banner">
+  <img src="images/Fawry.png"    alt="Fawry"      class="payment-img">
+  <img src="images/Visa.png"     alt="Visa"       width="100">
+  <img src="images/Mastercard.png" alt="Mastercard" width="60">
+  <img src="images/Instapay.png" alt="InstaPay"   width="100">
+  <img src="images/Meeza.png"    alt="Meeza"      class="payment-img">
+  
+</div>
+
+</body>
+</html>
