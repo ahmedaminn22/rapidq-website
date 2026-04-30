@@ -1,38 +1,237 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-<title>Doctors</title>
+  <meta charset="UTF-8">
+  <title>RapidQ</title>
+
+  <!-- Poppins Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+    * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+body {
+  background-color: #E4F1FA;
+}
+
+/* Navbar */
+.navbar {
+  padding: 20px 60px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.home-btn {
+  background-color: #1E88E5;
+  color: white;
+  padding: 10px 22px;
+  border: none;
+  border-radius: 12px;
+  font-weight: 600;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.home-btn:hover {
+  background-color: #1565C0;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.logo img {
+width: 120px;
+    margin-bottom: 40px;}
+
+/* Filters */
+.filters {
+  margin: 30px auto;
+  width: 80%;
+  display: flex;
+  gap: 15px;
+  background: #F5F5F5;
+  padding: 15px;
+  border-radius: 12px;
+}
+
+.filters input,
+.filters select {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  flex: 1;
+  font-size: 14px;
+}
+
+/* Cards Layout */
+.cards {
+  width: 80%;
+  margin: auto;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 25px;
+}
+
+/* Card */
+.card {
+  background: #F5F5F5;
+  border-radius: 16px;
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.card img {
+  width: 140px;
+}
+
+/* Card Info */
+.card-info h3 {
+  color: #0A2540;
+  font-weight: 600;
+  margin-bottom: 5px;
+}
+
+.specialty {
+  color: #1E88E5;
+  font-size: 14px;
+  margin-bottom: 5px;
+}
+
+.rating {
+  margin-bottom: 5px;
+}
+
+.price {
+  font-weight: 600;
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+/* Button */
+button {
+  background: #1E88E5;
+  color: white;
+  border: none;
+  padding: 8px 18px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 500;
+}
+
+button:hover {
+  background: #1565C0;
+}
+</style>
+
 </head>
-
-<h2>RapidQ</h2>
-
 <body>
-<section>
-<h2>Quick & Easy Booking</h2>
-<p>Book without waiting.</p>
+  <!-- Navbar -->
+  <header class="navbar">
+  <div class="logo">
+    <img src="images/logo.svg" alt="RapidQ">
 
-<h2>Committed to Your Time</h2>
-<p>Best doctors available.</p>
-</section>
+  </div>
+<a href="Home.html">
+  <button class="home-btn">Home</button>
+  </a>
+</header>
 
-<h2>Doctors</h2>
+  <!-- Filters -->
+  <section class="filters">
+    <input id="searchInput" type="text" placeholder="search by name or specialty...">
 
-<div>
-<p>Dr. John David</p>
-<a href="John-Profile.html">
-    <button type="button">Book Now</button></form>
+    <select id="specialityFilter">
+      <option>All Specialties</option>
+      <option>Cardiology</option>
+      <option>Neurology</option>
+      <option>Dentistry</option>
+    </select>
 
-</div>
+    <select id="ratingSort">
+      <option>Sort by Rating</option>
+      <option>⭐ 4.7</option>
+      <option>⭐ 4.8</option>
+      <option>⭐ 4.9</option>
+      <option>⭐ 5.0</option>
+    </select>
 
-<div>
-<p>Dr. Sarah Ali</p>
-<a href="Sarah-Profile.html">
-    <button type="button">Book Now</button></form></div>
+    <select id="priceSort">
+      <option>Sort by Price</option>
+      <option>400</option>
+      <option>500</option>
+      <option>600</option>
+      <option>700</option>
+    </select>
+  </section>
 
-<div>
-<p>Dr. Ahmed Hassan</p>
-<a href="Ahmed-Profile.html">
-    <button type="button">Book Now</button></form></div>
+  <!-- Doctors -->
+  <section class="cards">
+
+    <!-- Card -->
+    <div class="card" id="cardsContainer">
+      <div class="card-info">
+        <h3>Dr. Ahmed Ali</h3>
+        <p class="specialty">Cardiology</p>
+        <p class="rating">⭐ 4.8</p>
+        <p class="price">300 EGP</p>
+       <a href="Booking.html">
+        <button>Book Now</button>
+        </a>
+      </div>
+      <img src="images/portrait-professional-medical-worker-posing-picture-with-arms-folded.png">
+    </div>
+
+    <div class="card">
+      <div class="card-info">
+        <h3>Dr. Omar Hassan</h3>
+        <p class="specialty">Neurology</p>
+        <p class="rating">⭐ 5</p>
+        <p class="price">600 EGP</p>
+        <a href="Booking.html">
+        <button>Book Now</button>
+        </a>   
+    </div>
+      <img src="images/portrait-professional-medical-worker-posing-picture-with-arms-folded.png">
+    </div>
+
+    <div class="card">
+      <div class="card-info">
+        <h3>Dr. Mohamed Salama</h3>
+        <p class="specialty">Dentistry</p>
+        <p class="rating">⭐ 4.9</p>
+        <p class="price">500 EGP</p>
+        <a href="Booking.html">
+        <button>Book Now</button>
+        </a>
+      </div>
+      <img src="images/portrait-professional-medical-worker-posing-picture-with-arms-folded.png">
+    </div>
+
+    <div class="card">
+      <div class="card-info">
+        <h3>Dr. Ahmed El-Haggar</h3>
+        <p class="specialty">Cardiology</p>
+        <p class="rating">⭐ 4.7</p>
+        <p class="price">500 EGP</p>
+        <a href="Booking.html">
+        <button>Book Now</button>
+        </a>
+      </div>
+      <img src="images/portrait-professional-medical-worker-posing-picture-with-arms-folded.png">
+    </div>
+
+  </section>
 
 </body>
 </html>
