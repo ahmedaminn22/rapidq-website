@@ -1,32 +1,130 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-<title>Doctor Profile</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Doctor Profile - RapidQ</title>
+    <!-- استدعاء فونت Poppins -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;900&display=swap" rel="stylesheet">
+    
+    <style>
+        :root {
+            --primary-blue: #0573E4;
+            --bg-light: #E4F1FA;
+            --text-dark: #000000;
+            --text-gray: #888888;
+            --white: #ffffff;
+        }
 
+        body {
+            background-color: var(--bg-light);
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+        .container {
+            background-color: var(--white);
+            width: 100%;
+            max-width: 450px;
+            padding: 40px;
+            border-radius: 30px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+            text-align: center;
+        }
+
+        .logo-container {
+            margin-bottom: 20px;
+        }
+
+        .logo-container img {
+            height: 40px;
+        }
+
+        h2 {
+            font-weight: 800;
+            font-size: 28px;
+            color: var(--text-dark);
+            margin-bottom: 25px;
+        }
+
+        .doctor-card {
+            background: var(--bg-light);
+            padding: 20px;
+            border-radius: 20px;
+            text-align: left;
+            margin-bottom: 30px;
+        }
+
+        .info {
+            font-size: 15px;
+            margin-bottom: 12px;
+            color: var(--text-dark);
+        }
+
+        .info b {
+            color: var(--primary-blue);
+            font-weight: 600;
+            margin-right: 5px;
+        }
+
+        button {
+            background-color: var(--primary-blue);
+            color: var(--white);
+            border: none;
+            width: 100%;
+            padding: 15px;
+            border-radius: 12px;
+            cursor: pointer;
+            font-family: 'Poppins', sans-serif;
+            font-weight: 700;
+            font-size: 16px;
+            transition: transform 0.2s, background-color 0.2s;
+        }
+
+        button:hover {
+            background-color: #045bb8;
+            transform: translateY(-2px);
+        }
+
+        .back-link {
+            display: block;
+            margin-top: 20px;
+            color: var(--text-gray);
+            text-decoration: none;
+            font-size: 14px;
+            font-weight: 500;
+        }
+    </style>
 </head>
-
 <body>
 
 <div class="container">
+    <div class="logo-container">
+        <!-- استخدام اللوجو الـ SVG اللي وضحت مكانه -->
+        <img src="images/logo.svg" alt="RapidQ Logo">
+    </div>
 
-<h2>Doctor Profile</h2>
+    <h2>Doctor Profile</h2>
 
+    <div class="doctor-card">
+        <div class="info" id="docName"></div>
+        <div class="info" id="docAge"></div>
+        <div class="info" id="docContact"></div>
+        <div class="info" id="docClinic"></div>
+        <div class="info" id="docAddress"><b>Address:</b> Alexandria, Egypt</div>
+        <div class="info" id="docRating"><b>Rating:</b> ⭐⭐⭐</div>
+        <div class="info" id="docTimes"></div>
+    </div>
 
-<div class="info"><b>Name:</b> Dr. Ahmed El-Haggar</div>
-<div class="info"><b>Age:</b> 55</div>
-<div class="info"><b>Contact:</b> 012542345678</div>
-<div class="info"><b>Clinic:</b> City Care Clinic</div>
-<div class="info"><b>Address:</b> Alexandria, Egypt</div>
-<div class="info"><b>Rating:</b> ⭐⭐⭐</div>
-<div class="info"><b>Available Times:</b> 11 AM - 8 PM</div>
-
-<br>
-
-<a href="Booking.html">
-    <button>Book Appointment</button>
-</a>
-
+    <button id="bookBtn">Book Appointment</button>
+    
+    <a href="Doctor.html" class="back-link">← Back to Doctors</a>
 </div>
+
 <script>
   class Doctor {
     constructor(name, age, contact, clinic, times) {
@@ -38,6 +136,7 @@
     }
 
     render() {
+      // ربط البيانات بالـ IDs الموجودة في الـ HTML
       document.getElementById("docName").innerHTML    = "<b>Name:</b> "    + this.name;
       document.getElementById("docAge").innerHTML     = "<b>Age:</b> "     + this.age;
       document.getElementById("docContact").innerHTML = "<b>Contact:</b> " + this.contact;
@@ -53,7 +152,7 @@
     }
   }
 
-  // ---- Ahmed's data ----
+  // إنشاء أوبجكت الدكتور وعرض بياناته
   const doctor = new Doctor(
     "Dr. Ahmed El-Haggar",
     55,
@@ -65,5 +164,6 @@
   doctor.render();
   doctor.listen();
 </script>
+
 </body>
 </html>
